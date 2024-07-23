@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
+import header_image from "../assets/rocket.png";
 
 const url_download = "http://localhost:5173/Daffa-Maulana-Haekal-cv.pdf";
 
@@ -109,7 +110,9 @@ function ProfileComponent() {
                   className={
                     isVisible ? "animate__animated animate__zoomIn" : ""
                   }
-                ></div>
+                >
+                  <img src={header_image} alt="Header Img" />
+                </div>
               )}
             </TrackVisibility>
           </Col>

@@ -3,7 +3,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { SetStateAction, useEffect, useState } from "react";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo_personal.png";
 import icon1 from "../assets/nav-icon1.svg";
 import icon2 from "../assets/nav-icon2.svg";
 import icon3 from "../assets/nav-icon3.svg";
