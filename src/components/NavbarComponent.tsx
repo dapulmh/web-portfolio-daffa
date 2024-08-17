@@ -36,7 +36,7 @@ function NavbarComponent() {
     <Router>
       <Navbar expand="md" className={scrollStatus ? "scrolled" : ""}>
         <Container>
-          <Navbar.Brand href="/web-portfolio-daffa/#home">
+          <Navbar.Brand>
             <img src={logo} alt="Logo" />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav">
