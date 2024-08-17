@@ -13,7 +13,7 @@ interface SkillsCardProps {
 
 const SkillsCard: React.FC<SkillsCardProps> = ({ skills1, skills2 }) => {
   return (
-    <Container>
+    <Container id="skills">
       <div className="title">
         <h2>Programming Language, Framework, and Tools </h2>
       </div>

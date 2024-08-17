@@ -2,7 +2,6 @@ import "./App.css";
 import NavbarComponent from "./components/NavbarComponent";
 import ProfileComponent from "./components/ProfileComponent";
 import SkillsComponent from "./components/SkillsComponent";
-import ProjectComponent from "./components/ProjectComponent";
 
 function App() {
   const skills1 = [
@@ -158,20 +157,6 @@ function App() {
       imageUrl:
         "https://w7.pngwing.com/pngs/423/206/png-transparent-prometheus-hd-logo.png",
     },
-  ];
-
-  const repositories = [
-    {
-      title: "Repo 1",
-      description: "Description of repo 1",
-      repoUrl: "https://github.com/user/repo1",
-    },
-    {
-      title: "Repo 2",
-      description: "Description of repo 2",
-      repoUrl: "https://github.com/user/repo2",
-    },
-    // Add more repositories as needed
   ];
 
   return (
