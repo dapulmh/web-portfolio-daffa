@@ -7,7 +7,6 @@ import header_image from "../assets/rocket.png";
 const url_download = "http://localhost:5173/Daffa-Maulana-Haekal-cv.pdf";
 
 function ProfileComponent() {
-  const [index, setIndex] = useState(1);
   const [isDeleting, setIsDeleting] = useState(false);
   const [loopNum, setLoopNum] = useState(0);
   const [text, setText] = useState("");
@@ -40,15 +39,11 @@ function ProfileComponent() {
 
     if (!isDeleting && updatedText === fullText) {
       setIsDeleting(true);
-      setIndex((prevIndex) => prevIndex - 1);
       setDelta(period);
     } else if (isDeleting && updatedText === "") {
       setIsDeleting(false);
       setLoopNum(loopNum + 1);
-      setIndex(1);
       setDelta(500);
-    } else {
-      setIndex((prevIndex) => prevIndex + 1);
     }
   };
 
