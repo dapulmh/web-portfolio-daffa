@@ -2,6 +2,7 @@ import "./App.css";
 import NavbarComponent from "./components/NavbarComponent";
 import ProfileComponent from "./components/ProfileComponent";
 import SkillsComponent from "./components/SkillsComponent";
+import ProjectComponent from "./components/ProjectComponent";
 
 function App() {
   const skills1 = [
@@ -165,6 +166,7 @@ function App() {
         <NavbarComponent></NavbarComponent>
         <ProfileComponent></ProfileComponent>
         <SkillsComponent skills1={skills1} skills2={skills2} />
+        <ProjectComponent />
       </div>
     </>
   );
