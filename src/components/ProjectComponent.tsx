@@ -1,4 +1,17 @@
 import React, { useState } from "react";
+import image_tourism from "../assets/tourism_ml_image.png";
+import image_chatpul from "../assets/chatpul_web_ai_image.png";
+import image_momee_app from "../assets/momee_app_image.png";
+import image_momee_web from "../assets/momee_web_image.png";
+import image_fastfood from "../assets/fastfood_ml_image.png";
+import image_motor from "../assets/motor_ml_image.png";
+import image_portfolio from "../assets/portfolio_web_image.png";
+import image_prepaid from "../assets/prepaid_web_image.png";
+import image_salary from "../assets/salary_ml_image.png";
+import image_sarcasm from "../assets/sarcasm_mlops_image.png";
+import image_siasisten from "../assets/siasisten_web_image_1.png";
+import image_wallofhope_flutter from "../assets/wallofhope_flutter app_image.png";
+import image_wallofhope from "../assets/wallofhope_web_image.png";
 
 // Define the interface for a project
 interface Project {
@@ -13,41 +26,97 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
-    title: "Project 1",
-    imageUrl: "https://via.placeholder.com/150",
+    title: "Siasisten MTI",
+    imageUrl: image_siasisten,
     techStack: "React",
     fieldExpertise: "Web Development",
   },
   {
     id: 2,
-    title: "Project 2",
-    imageUrl: "https://via.placeholder.com/150",
+    title: "Chatpul",
+    imageUrl: image_chatpul,
     techStack: "Node.js",
     fieldExpertise: "Backend Development",
   },
   {
     id: 3,
-    title: "Project 3",
-    imageUrl: "https://via.placeholder.com/150",
+    title: "Momee App",
+    imageUrl: image_momee_app,
     techStack: "Angular",
     fieldExpertise: "Web Development",
   },
   {
     id: 4,
-    title: "Project 4",
-    imageUrl: "https://via.placeholder.com/150",
+    title: "Momee Web",
+    imageUrl: image_momee_web,
     techStack: "Python",
     fieldExpertise: "Data Science",
   },
   {
     id: 5,
-    title: "Project 5",
-    imageUrl: "https://via.placeholder.com/150",
+    title: "Prepaid Web",
+    imageUrl: image_prepaid,
     techStack: "Vue.js",
     fieldExpertise: "Web Development",
   },
   {
     id: 6,
+    title: "Web Portfolio",
+    imageUrl: image_portfolio,
+    techStack: "Java",
+    fieldExpertise: "Backend Development",
+  },
+  {
+    id: 7,
+    title: "MLOps Dutch Sarcasm Detection",
+    imageUrl: image_sarcasm,
+    techStack: "Java",
+    fieldExpertise: "Backend Development",
+  },
+  {
+    id: 8,
+    title: "Fast food image classification",
+    imageUrl: image_fastfood,
+    techStack: "Java",
+    fieldExpertise: "Backend Development",
+  },
+  {
+    id: 9,
+    title: "US Salary Prediction",
+    imageUrl: image_salary,
+    techStack: "Java",
+    fieldExpertise: "Backend Development",
+  },
+  {
+    id: 10,
+    title: "Tourism Rec",
+    imageUrl: image_tourism,
+    techStack: "Java",
+    fieldExpertise: "Backend Development",
+  },
+  {
+    id: 11,
+    title: "Motor Capacity Prediction",
+    imageUrl: image_motor,
+    techStack: "Java",
+    fieldExpertise: "Backend Development",
+  },
+  {
+    id: 12,
+    title: "wallofhope web",
+    imageUrl: image_wallofhope,
+    techStack: "Java",
+    fieldExpertise: "Backend Development",
+  },
+  {
+    id: 13,
+    title: "wallofhope app",
+    imageUrl: image_wallofhope_flutter,
+    techStack: "Java",
+    fieldExpertise: "Backend Development",
+  },
+  {
+    id: 14,
     title: "Project 6",
     imageUrl: "https://via.placeholder.com/150",
     techStack: "Java",
@@ -55,12 +124,10 @@ const projects: Project[] = [
   },
 ];
 
-// Functional component to display the project list
 const ProjectListPage: React.FC = () => {
   const [techStackFilter, setTechStackFilter] = useState<string>("");
   const [fieldExpertiseFilter, setFieldExpertiseFilter] = useState<string>("");
 
-  // Unique tech stacks and field expertises for dropdown options
   const techStacks = Array.from(
     new Set(projects.map((project) => project.techStack))
   );
@@ -84,6 +151,7 @@ const ProjectListPage: React.FC = () => {
         margin: "0 auto",
         fontFamily: "Arial, sans-serif",
       }}
+      id="project"
     >
       <div
         style={{

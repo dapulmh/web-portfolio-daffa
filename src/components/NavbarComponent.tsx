@@ -62,16 +62,18 @@ function NavbarComponent() {
               >
                 Skills
               </Nav.Link>
+              <Nav.Link
+                href="#project"
+                className={
+                  linkStatus == "projects"
+                    ? "active navbar-link"
+                    : "navbar-link"
+                }
+                onClick={() => onUpdateLink("projects")}
+              >
+                Projects
+              </Nav.Link>
               {/* <Nav.Link
-              href="#projects"
-              className={
-                linkStatus == "projects" ? "active navbar-link" : "navbar-link"
-              }
-              onClick={() => onUpdateLink("projects")}
-            >
-              Projects
-            </Nav.Link>
-            <Nav.Link
               href="#certificates"
               className={
                 linkStatus == "certificates"
