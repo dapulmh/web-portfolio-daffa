@@ -362,6 +362,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background-color: #222;
   color: #fff;
 }
+.project-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 
 .project-card {
   width: 30%;
@@ -370,8 +375,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   box-sizing: border-box;
   background-color: #1e1e1e;
   border-radius: 8px;
+  border: 1px solid white;
   transition: transform 0.2s;
 }
+
 
 .project-card:hover {
   transform: scale(1.05);
@@ -379,6 +386,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .project-card img {
   border-radius: 8px;
+  width: "100%";
+  height: "auto";
 }
 
 .project-card h3 {

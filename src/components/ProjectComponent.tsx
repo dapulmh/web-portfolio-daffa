@@ -20,6 +20,8 @@ interface Project {
   imageUrl: string;
   techStack: string;
   fieldExpertise: string;
+  description: string;
+  personal: boolean;
 }
 
 // Sample data for projects
@@ -30,6 +32,9 @@ const projects: Project[] = [
     imageUrl: image_siasisten,
     techStack: "React",
     fieldExpertise: "Web Development",
+    description:
+      "The Siasisten MTI are a management assistance project for the Master's degree program at the Faculty of Computer Science, University of Indonesia. This project is a group project intended for the Software Development course (PPL). Tech Stack: Django Rest Framework, React JS, Bootstrap.",
+    personal: false,
   },
   {
     id: 2,
@@ -37,6 +42,9 @@ const projects: Project[] = [
     imageUrl: image_chatpul,
     techStack: "Node.js",
     fieldExpertise: "Backend Development",
+    description:
+      "Chatpul is my personal project to develop a web-based chatbot using Ollama. Tech Stack: MERN (MongoDB, Express, React, Next.js).",
+    personal: true,
   },
   {
     id: 3,
@@ -44,6 +52,9 @@ const projects: Project[] = [
     imageUrl: image_momee_app,
     techStack: "Angular",
     fieldExpertise: "Web Development",
+    description:
+      "This project is my capstone project for Bangkit, intended for the entrepreneur track. Unfortunately we didn't get the best entrepreneur track project. Here, I am developing machine learning and assisting with the deployment process.",
+    personal: false,
   },
   {
     id: 4,
@@ -51,6 +62,9 @@ const projects: Project[] = [
     imageUrl: image_momee_web,
     techStack: "Python",
     fieldExpertise: "Data Science",
+    description:
+      "This project is a website for promoting the Momee application. I worked on this project independently as an additional project to support the promotion of our application in the Bangkit project. Tech Stack: React, TypeScript, Vite.",
+    personal: true,
   },
   {
     id: 5,
@@ -58,6 +72,9 @@ const projects: Project[] = [
     imageUrl: image_prepaid,
     techStack: "Vue.js",
     fieldExpertise: "Web Development",
+    description:
+      "This project is my internship project at PT Telekomunikasi Seluler (Telkomsel) as a Software Engineer, where I developed a web application to streamline the overusage reconciliation process. I successfully reduced the reconciliation processing time from a manual process of 3 hours to an automated process of 15 minutes, achieving an 85% decrease.",
+    personal: true,
   },
   {
     id: 6,
@@ -65,6 +82,9 @@ const projects: Project[] = [
     imageUrl: image_portfolio,
     techStack: "Java",
     fieldExpertise: "Backend Development",
+    description:
+      "This is my personal project to create website that can show my portfolio and increase my personal branding as a programmer",
+    personal: true,
   },
   {
     id: 7,
@@ -72,6 +92,9 @@ const projects: Project[] = [
     imageUrl: image_sarcasm,
     techStack: "Java",
     fieldExpertise: "Backend Development",
+    description:
+      "This is my personal project to create MLOps chain to detect sarcasm in dutch language. In this machine learning project i use tensorflow pipeline and deploy using tensorflow serving.",
+    personal: true,
   },
   {
     id: 8,
@@ -79,6 +102,9 @@ const projects: Project[] = [
     imageUrl: image_fastfood,
     techStack: "Java",
     fieldExpertise: "Backend Development",
+    description:
+      "This is my personal project to develop image classification for fast food image using tensorflow. In this machine learning i use mobilenet transfer learning and adding a new tf layer.",
+    personal: true,
   },
   {
     id: 9,
@@ -86,13 +112,19 @@ const projects: Project[] = [
     imageUrl: image_salary,
     techStack: "Java",
     fieldExpertise: "Backend Development",
+    description:
+      "This is my personal project to create US salary prediction from kaggle dataset and implement it in streamlit. Tech Stack : Scikit Learn, Streamlit.",
+    personal: true,
   },
   {
     id: 10,
-    title: "Tourism Rec",
+    title: "Indonesia Tourism Recommendation System",
     imageUrl: image_tourism,
     techStack: "Java",
     fieldExpertise: "Backend Development",
+    description:
+      "This is my personal project to develop recommendation system from content based filtering and collaborative learning using kaggle dataset.",
+    personal: true,
   },
   {
     id: 11,
@@ -100,6 +132,9 @@ const projects: Project[] = [
     imageUrl: image_motor,
     techStack: "Java",
     fieldExpertise: "Backend Development",
+    description:
+      "This is my project for my campus course to develop prediction for motor capacity.",
+    personal: true,
   },
   {
     id: 12,
@@ -107,6 +142,8 @@ const projects: Project[] = [
     imageUrl: image_wallofhope,
     techStack: "Java",
     fieldExpertise: "Backend Development",
+    description: "string",
+    personal: false,
   },
   {
     id: 13,
@@ -114,6 +151,8 @@ const projects: Project[] = [
     imageUrl: image_wallofhope_flutter,
     techStack: "Java",
     fieldExpertise: "Backend Development",
+    description: "string",
+    personal: false,
   },
   {
     id: 14,
@@ -121,6 +160,8 @@ const projects: Project[] = [
     imageUrl: "https://via.placeholder.com/150",
     techStack: "Java",
     fieldExpertise: "Backend Development",
+    description: "string",
+    personal: true,
   },
 ];
 
@@ -144,26 +185,11 @@ const ProjectListPage: React.FC = () => {
   );
 
   return (
-    <div
-      style={{
-        padding: "20px",
-        maxWidth: "1200px",
-        margin: "0 auto",
-        fontFamily: "Arial, sans-serif",
-      }}
-      id="project"
-    >
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          marginBottom: "20px",
-        }}
-      >
+    <div className="project-list-container" id="project">
+      <div className="filter-container">
         <select
           value={techStackFilter}
           onChange={(e) => setTechStackFilter(e.target.value)}
-          style={{ padding: "10px", fontSize: "16px" }}
         >
           <option value="">All Tech Stacks</option>
           {techStacks.map((stack) => (
@@ -175,7 +201,6 @@ const ProjectListPage: React.FC = () => {
         <select
           value={fieldExpertiseFilter}
           onChange={(e) => setFieldExpertiseFilter(e.target.value)}
-          style={{ padding: "10px", fontSize: "16px" }}
         >
           <option value="">All Field Expertises</option>
           {fieldExpertises.map((expertise) => (
@@ -185,31 +210,11 @@ const ProjectListPage: React.FC = () => {
           ))}
         </select>
       </div>
-      <div
-        style={{
-          display: "flex",
-          flexWrap: "wrap",
-          justifyContent: "space-between",
-        }}
-      >
+      <div className="project-cards-container">
         {filteredProjects.map((project) => (
-          <div
-            key={project.id}
-            style={{
-              width: "30%",
-              marginBottom: "20px",
-              padding: "10px",
-              boxSizing: "border-box",
-            }}
-          >
-            <img
-              src={project.imageUrl}
-              alt={project.title}
-              style={{ width: "100%", height: "auto", borderRadius: "8px" }}
-            />
-            <h3 style={{ marginTop: "10px", color: "#333" }}>
-              {project.title}
-            </h3>
+          <div key={project.id} className="project-card">
+            <img src={project.imageUrl} alt={project.title} />
+            <h3>{project.title}</h3>
           </div>
         ))}
       </div>
