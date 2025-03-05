@@ -200,6 +200,9 @@ const ProjectListPage: React.FC = () => {
 
   return (
     <div className="project-list-container" id="project">
+      <div className="title">
+        <h2>My Projects </h2>
+      </div>
       <div className="filter-container">
         <select
           value={techStackFilter}

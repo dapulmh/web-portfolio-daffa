@@ -12,7 +12,7 @@ function ProfileComponent() {
   const [loopNum, setLoopNum] = useState(0);
   const [text, setText] = useState("");
   const [delta, setDelta] = useState(300 - Math.random() * 100);
-  const toRotate = ["ML Engineer", "AI Engineer", "Web Developer"];
+  const toRotate = ["ML Engineer", "AI Engineer", "Software Engineer"];
   const period = 1000;
 
   useEffect(() => {
