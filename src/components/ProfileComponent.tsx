@@ -5,7 +5,7 @@ import TrackVisibility from "react-on-screen";
 import header_image from "../assets/rocket.png";
 
 const url_download =
-  "http://localhost:5173/Daffa_Maulana_Haekal_Curriculum_Vitae.pdf";
+  "https://puliolio.vercel.app/Daffa_Maulana_Haekal_Curriculum_Vitae.pdf";
 
 function ProfileComponent() {
   const [isDeleting, setIsDeleting] = useState(false);

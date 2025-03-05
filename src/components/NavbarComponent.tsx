@@ -45,7 +45,7 @@ function NavbarComponent() {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
               <Nav.Link
-                href="#home"
+                href="home"
                 className={
                   linkStatus == "home" ? "active navbar-link" : "navbar-link"
                 }
@@ -54,7 +54,7 @@ function NavbarComponent() {
                 Profile
               </Nav.Link>
               <Nav.Link
-                href="#skills"
+                href="skills"
                 className={
                   linkStatus == "skills" ? "active navbar-link" : "navbar-link"
                 }
@@ -63,7 +63,7 @@ function NavbarComponent() {
                 Skills
               </Nav.Link>
               <Nav.Link
-                href="#project"
+                href="project"
                 className={
                   linkStatus == "projects"
                     ? "active navbar-link"
