@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import projects from "../data/projects";
 
 // Define the interface for a project
@@ -27,8 +26,6 @@ const ProjectListPage: React.FC = () => {
       project.fieldExpertise === fieldExpertiseFilter;
     return techStackMatches && fieldExpertiseMatches;
   });
-
-  const handleCardClick = (id: number) => {};
 
   return (
     <div className="project-list-container" id="project">
@@ -74,7 +71,6 @@ const ProjectListPage: React.FC = () => {
           <div
             key={project.id}
             className="project-card"
-            onClick={() => handleCardClick(project.id)}
             style={{ cursor: "pointer" }}
           >
             <img src={project.imageUrl} alt={project.title} />
