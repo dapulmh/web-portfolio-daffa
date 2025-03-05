@@ -18,7 +18,7 @@ interface Project {
   id: number;
   title: string;
   imageUrl: string;
-  techStack: string;
+  techStack: Array<string>;
   fieldExpertise: string;
   description: string;
   personal: boolean;
@@ -30,8 +30,8 @@ const projects: Project[] = [
     id: 1,
     title: "Siasisten MTI",
     imageUrl: image_siasisten,
-    techStack: "React",
-    fieldExpertise: "Web Development",
+    techStack: ["Django Rest", "React Javascript", "CSS"],
+    fieldExpertise: "Fullstack Development",
     description:
       "The Siasisten MTI are a management assistance project for the Master's degree program at the Faculty of Computer Science, University of Indonesia. This project is a group project intended for the Software Development course (PPL). Tech Stack: Django Rest Framework, React JS, Bootstrap.",
     personal: false,
@@ -40,8 +40,14 @@ const projects: Project[] = [
     id: 2,
     title: "Chatpul",
     imageUrl: image_chatpul,
-    techStack: "Node.js",
-    fieldExpertise: "Backend Development",
+    techStack: [
+      "MongoDB",
+      "Express Javascript",
+      "Next Typescript",
+      "Tailwind",
+      "All Tech Stacks",
+    ],
+    fieldExpertise: "AI Web Development",
     description:
       "Chatpul is my personal project to develop a web-based chatbot using Ollama. Tech Stack: MERN (MongoDB, Express, React, Next.js).",
     personal: true,
@@ -50,8 +56,8 @@ const projects: Project[] = [
     id: 3,
     title: "Momee App",
     imageUrl: image_momee_app,
-    techStack: "Angular",
-    fieldExpertise: "Web Development",
+    techStack: ["Tensorflow"],
+    fieldExpertise: "Machine Learning",
     description:
       "This project is my capstone project for Bangkit, intended for the entrepreneur track. Unfortunately we didn't get the best entrepreneur track project. Here, I am developing machine learning and assisting with the deployment process.",
     personal: false,
@@ -60,8 +66,8 @@ const projects: Project[] = [
     id: 4,
     title: "Momee Web",
     imageUrl: image_momee_web,
-    techStack: "Python",
-    fieldExpertise: "Data Science",
+    techStack: ["React Typescript Vite", "CSS"],
+    fieldExpertise: "Frontend Development",
     description:
       "This project is a website for promoting the Momee application. I worked on this project independently as an additional project to support the promotion of our application in the Bangkit project. Tech Stack: React, TypeScript, Vite.",
     personal: true,
@@ -70,8 +76,8 @@ const projects: Project[] = [
     id: 5,
     title: "Prepaid Web",
     imageUrl: image_prepaid,
-    techStack: "Vue.js",
-    fieldExpertise: "Web Development",
+    techStack: ["Django Rest", "HTML", "CSS"],
+    fieldExpertise: "Fullstack Development",
     description:
       "This project is my internship project at PT Telekomunikasi Seluler (Telkomsel) as a Software Engineer, where I developed a web application to streamline the overusage reconciliation process. I successfully reduced the reconciliation processing time from a manual process of 3 hours to an automated process of 15 minutes, achieving an 85% decrease.",
     personal: true,
@@ -80,8 +86,8 @@ const projects: Project[] = [
     id: 6,
     title: "Web Portfolio",
     imageUrl: image_portfolio,
-    techStack: "Java",
-    fieldExpertise: "Backend Development",
+    techStack: ["React Typescript Vite", "CSS"],
+    fieldExpertise: "Frontend Development",
     description:
       "This is my personal project to create website that can show my portfolio and increase my personal branding as a programmer",
     personal: true,
@@ -90,8 +96,8 @@ const projects: Project[] = [
     id: 7,
     title: "MLOps Dutch Sarcasm Detection",
     imageUrl: image_sarcasm,
-    techStack: "Java",
-    fieldExpertise: "Backend Development",
+    techStack: ["Tensorflow"],
+    fieldExpertise: "Machine Learning",
     description:
       "This is my personal project to create MLOps chain to detect sarcasm in dutch language. In this machine learning project i use tensorflow pipeline and deploy using tensorflow serving.",
     personal: true,
@@ -100,8 +106,8 @@ const projects: Project[] = [
     id: 8,
     title: "Fast food image classification",
     imageUrl: image_fastfood,
-    techStack: "Java",
-    fieldExpertise: "Backend Development",
+    techStack: ["Tensorflow"],
+    fieldExpertise: "Machine Learning",
     description:
       "This is my personal project to develop image classification for fast food image using tensorflow. In this machine learning i use mobilenet transfer learning and adding a new tf layer.",
     personal: true,
@@ -110,8 +116,8 @@ const projects: Project[] = [
     id: 9,
     title: "US Salary Prediction",
     imageUrl: image_salary,
-    techStack: "Java",
-    fieldExpertise: "Backend Development",
+    techStack: ["Scikit-learn", "Pickle"],
+    fieldExpertise: "AI Web Development",
     description:
       "This is my personal project to create US salary prediction from kaggle dataset and implement it in streamlit. Tech Stack : Scikit Learn, Streamlit.",
     personal: true,
@@ -120,8 +126,8 @@ const projects: Project[] = [
     id: 10,
     title: "Indonesia Tourism Recommendation System",
     imageUrl: image_tourism,
-    techStack: "Java",
-    fieldExpertise: "Backend Development",
+    techStack: ["Tensorflow"],
+    fieldExpertise: "Machine Learning",
     description:
       "This is my personal project to develop recommendation system from content based filtering and collaborative learning using kaggle dataset.",
     personal: true,
@@ -130,8 +136,8 @@ const projects: Project[] = [
     id: 11,
     title: "Motor Capacity Prediction",
     imageUrl: image_motor,
-    techStack: "Java",
-    fieldExpertise: "Backend Development",
+    techStack: ["Scikit-Learn"],
+    fieldExpertise: "Machine Learning",
     description:
       "This is my project for my campus course to develop prediction for motor capacity.",
     personal: true,
@@ -140,58 +146,76 @@ const projects: Project[] = [
     id: 12,
     title: "wallofhope web",
     imageUrl: image_wallofhope,
-    techStack: "Java",
-    fieldExpertise: "Backend Development",
-    description: "string",
+    techStack: ["Django", "HTML", "CSS"],
+    fieldExpertise: "Fullstack Development",
+    description:
+      "This is my project for my campus course to develop a web application about PTS (Pacil Tau Stunting) with django framework",
     personal: false,
   },
   {
     id: 13,
     title: "wallofhope app",
     imageUrl: image_wallofhope_flutter,
-    techStack: "Java",
-    fieldExpertise: "Backend Development",
-    description: "string",
+    techStack: ["Flutter"],
+    fieldExpertise: "Application Development",
+    description:
+      "This is my project for my campus course to develop a web application about PTS (Pacil Tau Stunting) with flutter",
     personal: false,
   },
   {
     id: 14,
-    title: "Project 6",
-    imageUrl: "https://via.placeholder.com/150",
-    techStack: "Java",
-    fieldExpertise: "Backend Development",
-    description: "string",
-    personal: true,
+    title: "Library Management With Java Springboot",
+    imageUrl: image_wallofhope,
+    techStack: ["Java SpringBoot"],
+    fieldExpertise: "Fullstack Development",
+    description:
+      "This is my project for my campus course to develop a web about library management with java springboot",
+    personal: false,
   },
 ];
 
 const ProjectListPage: React.FC = () => {
-  const [techStackFilter, setTechStackFilter] = useState<string>("");
+  const [techStackFilter, setTechStackFilter] = useState<Array<string>>([
+    "All Tech Stacks",
+  ]);
   const [fieldExpertiseFilter, setFieldExpertiseFilter] = useState<string>("");
 
   const techStacks = Array.from(
-    new Set(projects.map((project) => project.techStack))
+    new Set(projects.flatMap((project) => project.techStack))
   );
   const fieldExpertises = Array.from(
     new Set(projects.map((project) => project.fieldExpertise))
   );
 
   // Filtered projects based on dropdown selections
-  const filteredProjects = projects.filter(
-    (project) =>
-      (techStackFilter === "" || project.techStack === techStackFilter) &&
-      (fieldExpertiseFilter === "" ||
-        project.fieldExpertise === fieldExpertiseFilter)
-  );
+  const filteredProjects = projects.filter((project) => {
+    const techStackMatches =
+      techStackFilter.includes("All Tech Stacks") ||
+      techStackFilter.every((stack) => project.techStack.includes(stack));
+    const fieldExpertiseMatches =
+      fieldExpertiseFilter === "" ||
+      project.fieldExpertise === fieldExpertiseFilter;
+    return techStackMatches && fieldExpertiseMatches;
+  });
 
   return (
     <div className="project-list-container" id="project">
       <div className="filter-container">
         <select
           value={techStackFilter}
-          onChange={(e) => setTechStackFilter(e.target.value)}
+          onChange={(e) => {
+            const selectedValues = Array.from(
+              e.target.selectedOptions,
+              (option) => option.value
+            );
+            if (selectedValues.includes("All Tech Stacks")) {
+              setTechStackFilter(["All Tech Stacks"]);
+            } else {
+              setTechStackFilter(selectedValues);
+            }
+          }}
         >
-          <option value="">All Tech Stacks</option>
+          <option value="All Tech Stacks">All Tech Stacks</option>
           {techStacks.map((stack) => (
             <option key={stack} value={stack}>
               {stack}
