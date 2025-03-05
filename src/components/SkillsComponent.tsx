@@ -1,17 +1,8 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import { skills1, skills2 } from "../data/skills"; // Adjust the import as needed
 
-interface Skill {
-  name: string;
-  imageUrl: string;
-}
-
-interface SkillsCardProps {
-  skills1: Skill[];
-  skills2: Skill[];
-}
-
-const SkillsCard: React.FC<SkillsCardProps> = ({ skills1, skills2 }) => {
+const SkillsCard: React.FC = () => {
   return (
     <Container id="skills">
       <div className="title">

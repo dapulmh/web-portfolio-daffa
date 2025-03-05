@@ -1,39 +1,25 @@
 import React from "react";
+import { useParams } from "react-router-dom";
+import projects from "../data/projects";
 
-// Define the interface for the project details props
-interface ProjectDetailProps {
-  title: string;
-  description: string;
-  githubUrl: string;
-}
+const ProjectDetailComponent: React.FC = () => {
+  const { id } = useParams<{ id: string }>(); // Get the project ID from the URL
 
-// Functional component to display project details
-const ProjectDetailPage: React.FC<ProjectDetailProps> = ({
-  title,
-  description,
-  githubUrl,
-}) => {
+  const project = projects.find((project) => project.id === parseInt(id!)); // Find the project by ID
+
+  if (!project) {
+    return <div>Project not found</div>; // Handle case where project is not found
+  }
+
   return (
-    <div
-      style={{
-        padding: "20px",
-        maxWidth: "800px",
-        margin: "0 auto",
-        fontFamily: "Arial, sans-serif",
-      }}
-    >
-      <h1 style={{ color: "#333" }}>{title}</h1>
-      <p style={{ color: "#666", lineHeight: "1.6" }}>{description}</p>
-      <a
-        href={githubUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        style={{ color: "#007BFF", textDecoration: "none" }}
-      >
-        View on GitHub
-      </a>
+    <div>
+      <h1>{project.title}</h1>
+      <img src={project.imageUrl} alt={project.title} />
+      <p>{project.description}</p>
+      <p>Tech Stack: {project.techStack.join(", ")}</p>
+      <p>Field Expertise: {project.fieldExpertise}</p>
     </div>
   );
 };
 
-export default ProjectDetailPage;
+export default ProjectDetailComponent;
