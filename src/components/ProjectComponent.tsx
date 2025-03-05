@@ -1,9 +1,13 @@
 import React, { useState } from "react";
 import projects from "../data/projects";
-
-// Define the interface for a project
+import { useNavigate } from "react-router-dom";
 
 const ProjectListPage: React.FC = () => {
+  const navigate = useNavigate();
+
+  const handleCardClick = (id: number) => {
+    navigate(`/project/${id}`);
+  };
   const [techStackFilter, setTechStackFilter] = useState<Array<string>>([
     "All Tech Stacks",
   ]);
@@ -71,7 +75,7 @@ const ProjectListPage: React.FC = () => {
           <div
             key={project.id}
             className="project-card"
-            style={{ cursor: "pointer" }}
+            onClick={() => handleCardClick(project.id)}
           >
             <img src={project.imageUrl} alt={project.title} />
             <h3>{project.title}</h3>

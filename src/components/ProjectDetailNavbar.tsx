@@ -10,7 +10,7 @@ import icon3 from "../assets/nav-icon3.svg";
 import icon5 from "../assets/github.png";
 import { Link } from "react-router-dom";
 
-function NavbarComponent() {
+function ProjectDetailNavbar() {
   const [linkStatus, setLink] = useState("home");
   const [scrollStatus, setScroll] = useState(false);
 
@@ -44,7 +44,8 @@ function NavbarComponent() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
             <Nav.Link
-              href="#home"
+              as={Link}
+              to="/"
               className={
                 linkStatus == "home" ? "active navbar-link" : "navbar-link"
               }
@@ -53,7 +54,8 @@ function NavbarComponent() {
               Profile
             </Nav.Link>
             <Nav.Link
-              href="#skills"
+              as={Link}
+              to="/"
               className={
                 linkStatus == "skills" ? "active navbar-link" : "navbar-link"
               }
@@ -62,7 +64,8 @@ function NavbarComponent() {
               Skills
             </Nav.Link>
             <Nav.Link
-              href="#project"
+              as={Link}
+              to="/"
               className={
                 linkStatus == "projects" ? "active navbar-link" : "navbar-link"
               }
@@ -104,4 +107,4 @@ function NavbarComponent() {
   );
 }
 
-export default NavbarComponent;
+export default ProjectDetailNavbar;

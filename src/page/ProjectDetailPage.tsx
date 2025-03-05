@@ -2,13 +2,13 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import projects from "../data/projects";
 
-const ProjectDetailComponent: React.FC = () => {
+const ProjectDetailPage: React.FC = () => {
   const { id } = useParams<{ id: string }>(); // Get the project ID from the URL
 
   const project = projects.find((project) => project.id === parseInt(id!)); // Find the project by ID
 
   if (!project) {
-    return <div>Project not found</div>; // Handle case where project is not found
+    return <div>Project not found</div>;
   }
 
   return (
@@ -22,4 +22,4 @@ const ProjectDetailComponent: React.FC = () => {
   );
 };
 
-export default ProjectDetailComponent;
+export default ProjectDetailPage;
