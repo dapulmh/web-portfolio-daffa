@@ -1,16 +1,38 @@
 import "./App.css";
 import NavbarComponent from "./components/NavbarComponent";
-import ProfileComponent from "./components/ProfileComponent";
-import SkillsComponent from "./components/SkillsComponent";
-import ProjectComponent from "./components/ProjectComponent";
+import ProjectDetailNavbar from "./components/ProjectDetailNavbar";
+import HomePage from "./page/home";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  useLocation,
+} from "react-router-dom";
+import ProjectDetailPage from "./page/ProjectDetailPage";
 
 function App() {
   return (
+    <Router>
+      <MainLayout />
+    </Router>
+  );
+}
+
+function MainLayout() {
+  const location = useLocation();
+
+  return (
     <div>
-      <NavbarComponent />
-      <ProfileComponent />
-      <SkillsComponent />
-      <ProjectComponent />
+      {location.pathname.startsWith("/project/") ? (
+        <ProjectDetailNavbar />
+      ) : (
+        <NavbarComponent />
+      )}
+
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/project/:id" element={<ProjectDetailPage />} />
+      </Routes>
     </div>
   );
 }
