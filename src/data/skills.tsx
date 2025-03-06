@@ -72,6 +72,29 @@ export const skills1 = [
     imageUrl:
       "https://e7.pngegg.com/pngimages/777/274/png-clipart-google-cloud-platform-cloud-computing-microsoft-azure-business-cloud-computing-text-logo.png",
   },
+  {
+    name: "ollama",
+    imageUrl:
+      "https://img.utdstc.com/icon/6f9/ee0/6f9ee044146aecfd841c98f2a270d996b3e33440142456b9b4349c8bc681857c:200 ",
+  },
+  {
+    name: "Django Rest",
+    imageUrl: "https://storage.caktusgroup.com/media/blog-images/drf-logo2.png",
+  },
+  {
+    name: "Express",
+    imageUrl:
+      "https://adware-technologies.s3.amazonaws.com/uploads/technology/thumbnail/20/express-js.png",
+  },
+  {
+    name: "Power BI",
+    imageUrl:
+      "https://cdn.prod.website-files.com/6100d0111a4ed76bc1b9fd54/62bbfce03be66c8faece3155_power%20bi%201.jpg",
+  },
+  {
+    name: "AWS",
+    imageUrl: "https://avatars.githubusercontent.com/u/2232217?s=280&v=4",
+  },
 ];
 
 export const skills2 = [
@@ -148,5 +171,30 @@ export const skills2 = [
     name: "Prometheus",
     imageUrl:
       "https://w7.pngwing.com/pngs/423/206/png-transparent-prometheus-hd-logo.png",
+  },
+  {
+    name: "Next",
+    imageUrl:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqM_LP8s8YpNGPhSuU5MmFSjdQK92MPPEGfQ&s",
+  },
+  {
+    name: "MongoDB",
+    imageUrl:
+      "https://miro.medium.com/v2/resize:fit:512/1*doAg1_fMQKWFoub-6gwUiQ.png",
+  },
+  {
+    name: "Tailwind",
+    imageUrl:
+      "https://jefrydco.id/_nuxt/img/how-tailwind-css-help-reduce-workload-by-jefrydco.833f9b8.jpg",
+  },
+  {
+    name: "Vite",
+    imageUrl:
+      "https://upload.wikimedia.org/wikipedia/commons/f/f1/Vitejs-logo.svg",
+  },
+  {
+    name: "Springboot",
+    imageUrl:
+      "https://daengweb.id/uploads/galeri/2/spring-boot-logo-optimize.png",
   },
 ];
